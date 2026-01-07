@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KD Import & Exports | Premium Global Trade</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #d4af37; /* Luxe Gold */
+            --bg: #050505;
+            --surface: #121212;
+            --text: #ffffff;
+            --text-dim: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav { 
+            padding: 1.5rem 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: fixed; 
+            width: 100%; 
+            z-index: 1000; 
+            background: rgba(5, 5, 5, 0.8); 
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass);
+        }
+        .logo { font-family: 'Montserrat'; font-size: 1.4rem; color: var(--primary); letter-spacing: 2px; }
+
+        /* Hero Section */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
+            padding: 0 10%;
+        }
+        .hero h1 { font-family: 'Montserrat'; font-size: clamp(2.5rem, 10vw, 6rem); line-height: 1; margin-bottom: 1.5rem; background: linear-gradient(to bottom, #fff, #888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.1rem; color: var(--primary); letter-spacing: 5px; text-transform: uppercase; margin-bottom: 3rem; }
+
+        /* Leadership Cards */
+        .section-title { text-align: center; margin-bottom: 4rem; }
+        .section-title h2 { font-family: 'Montserrat'; font-size: 2.5rem; color: var(--primary); }
+
+        .team-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+            padding: 5rem 10%; 
+        }
+        .member-card { 
+            background: var(--surface); 
+            padding: 3rem 2rem; 
+            border-radius: 24px; 
+            text-align: center;
+            border: 1px solid var(--glass);
+            transition: 0.4s;
+        }
+        .member-card:hover { border-color: var(--primary); transform: translateY(-10px); background: #1a1a1a; }
+        .member-card i { font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; }
+        .member-card h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .member-card p { color: var(--text-dim); font-weight: 300; }
+
+        /* Contact Section */
+        .contact-container { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            padding: 8rem 10%;
+            background: #080808;
+        }
+        .contact-form { background: var(--surface); padding: 3rem; border-radius: 24px; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-dim); }
+        .form-group input, .form-group textarea { 
+            width: 100%; padding: 1rem; background: #000; border: 1px solid var(--glass); 
+            color: #fff; border-radius: 12px; outline: none; transition: 0.3s;
+        }
+        .form-group input:focus { border-color: var(--primary); }
+
+        .btn { 
+            background: var(--primary); color: #000; padding: 1.2rem 2.5rem; 
+            border: none; border-radius: 50px; font-weight: bold; cursor: pointer;
+            transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .btn:hover { box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); transform: scale(1.05); }
+
+        .info-item { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
+        .info-item i { width: 50px; height: 50px; background: var(--glass); display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary); }
+
+        footer { text-align: center; padding: 3rem; border-top: 1px solid var(--glass); color: var(--text-dim); font-size: 0.9rem; }
+
+        @media (max-width: 900px) { .contact-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">KD EXPORTS</div>
+    </nav>
+
+    <section class="hero">
+        <h1 data-aos="fade-up">TRADING WITHOUT<br>BOUNDARIES</h1>
+        <p data-aos="fade-up" data-aos-delay="300">Global Vision. Local Excellence.</p>
+        <div data-aos="fade-up" data-aos-delay="500">
+            <a href="#contact" class="btn">Start a Project</a>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 5rem;">
+        <div class="section-title" data-aos="fade-down">
+            <h2>Board of Directors</h2>
+        </div>
+        <div class="team-grid">
+            <div class="member-card" data-aos="fade-right">
+                <i class="fas fa-user-tie"></i>
+                <h3>Kuldeep Balot</h3>
+                <p>Chief Executive Officer</p>
+            </div>
+            <div class="member-card" data-aos="fade-left">
+                <i class="fas fa-handshake"></i>
+                <h3>Vithal Dev Chouhan</h3>
+                <p>Co-Founder</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-container" id="contact">
+        <div data-aos="fade-right">
+            <h2 style="font-size: 3rem; margin-bottom: 2rem;">Let's Connect<br><span style="color: var(--primary);">Globally.</span></h2>
+            
+            <div class="info-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <p style="color: var(--text-dim);">Headquarters</p>
+                    <p>Jalor, Rajasthan, India</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <p style="color: var(--text-dim);">Direct Line</p>
+                    <p>+91 9680716707</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <p style="color: var(--text-dim);">Email Support</p>
+                    <p>kulsarasiyawas@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form" data-aos="zoom-in">
+            <form action="https://formspree.io/f/mqearpbo" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Inquiry Details</label>
+                    <textarea name="message" rows="5" placeholder="What are you looking to import/export?"></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 KD Import & Exports. Managed by KD & Team.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
